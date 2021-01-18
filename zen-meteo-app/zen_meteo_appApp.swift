@@ -11,7 +11,9 @@ import SwiftUI
 struct zen_meteo_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let weatherService = WeatherService()
+            let viewModel = WeatherViewModel(weatherService: weatherService)
+            WeatherView(weatherViewModel: viewModel)
         }
     }
 }
