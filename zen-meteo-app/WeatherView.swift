@@ -50,6 +50,8 @@ struct WeatherView: View {
                             })
                     }.padding(.trailing)
                 }
+                Divider()
+                    .padding(.horizontal)
                 
             //MARK: Hourly
                 ScrollView(.horizontal, showsIndicators: false, content: {
@@ -64,7 +66,9 @@ struct WeatherView: View {
                             }.font(.system(size: 20, weight: .bold, design: .serif))
                         }
                     }
-                }).padding()
+                }).padding(.horizontal)
+                Divider()
+                    .padding(.horizontal)
                 
             //MARK: Daily
                 ForEach(weatherViewModel.dailyWeather, id: \.id) { day in
